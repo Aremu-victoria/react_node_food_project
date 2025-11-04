@@ -5,6 +5,9 @@ import RiderNotificationPage from "./component/RiderNotificationPage";
 import Home from "./Pages/Home";
 import HomeTwo from "./Pages/HomeTwo";
 import Companies from "./Pages/Companies";
+import Restaurant from "./Pages/Restaurant";
+import Cart from "./Pages/Cart";
+import Checkout from "./Pages/Checkout";
 import Sellers from "./Pages/Sellers";
 import Signup from "./component/Form/Signup";
 import SignupAsSeller from "./component/Form/SignupAsSeller";
@@ -39,6 +42,10 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+          <Route path="/restaurant/:id" element={<Restaurant />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
 
           <Route
             path="/seller-dashboard"

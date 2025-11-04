@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const bodyParser = require('body-parser')
 const userRouter = require("../backend/routers/user.router");
+const restaurantsRouter = require("../backend/routers/restaurants.router");
 const databaseConnection = require("../backend/db");
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ bodyParser.urlencoded({extended:true})
 
 // Routes
 app.use("/", userRouter);
+app.use("/", restaurantsRouter);
 
 const port = process.env.PORT || 8080
 

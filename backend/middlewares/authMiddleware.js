@@ -9,8 +9,10 @@ const authMiddleware = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.userId = decoded.id;
-    req.role = decoded.role;
+    // Support tokens that contain { id, role } as well as older tokens that may contain { email }
+    req.userId = decoded.id || null;
+    req.role = decoded.role || null;
+    req.email = decoded.email || null;
     next();
   } catch (error) {
     res.status(401).json({ message: 'Token is not valid' });

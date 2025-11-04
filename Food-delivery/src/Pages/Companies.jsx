@@ -4,12 +4,13 @@ import item7 from "../assets/images/item7.png";
 import brent from "../assets/images/brent.png";
 import alata from "../assets/images/alata.png";
 import aroma from "../assets/images/aroma.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { toast } from "react-toastify";
 const Companies = () => {
         const [user, setUser] = useState(null);
+        const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -46,36 +47,37 @@ const Companies = () => {
 to cooking at home. You can simply order your 
 food, have it prepared, and enjoy it without 
 the hassle at ALATA"
-        btn="Browese Alata"
+        btn="Browse Alata"
         style={{ width: "50%" }}
         oneImg={alata}
+        action={() => navigate('/restaurant/alata')}
       />
 
       <CompanyCard
-        com="Item7go 
-Party Rice Shawarma"
+        com={`Item7go Party Rice Shawarma`}
         comCon="Item7go offering a discounted price for a combination of items (e.g., a burger, fries, and drink combo)."
-        btn="Browse item7go"
+        btn="Browse Item7go"
         style={{ width: "50%" }}
         oneImg={item7}
+        action={() => navigate('/restaurant/item7go')}
       />
 
       <CompanyCard
-        com="Aroma Place Mosho
-Restaurant"
+        com={`Aroma Place Mosho Restaurant`}
         comCon="Aroma Place restaurant allow you to try new and different dishes that you might not make at home."
         btn="Browse Aroma"
         style={{ width: "50%" }}
         oneImg={aroma}
+        action={() => navigate('/restaurant/aroma')}
       />
 
       <CompanyCard
-        com="Brent Mall Mosho
-Restaurant"
+        com={`Brent Mall Mosho Restaurant`}
         comCon="Brent mall Mosho Free appetizers, desserts, or drinks with the purchase of our family YAKATA meal."
         btn="Browse Brent Mall"
         style={{ width: "50%" }}
         oneImg={brent}
+        action={() => navigate('/restaurant/brent')}
       />
     </div>
   );

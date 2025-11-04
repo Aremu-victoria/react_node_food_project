@@ -276,9 +276,9 @@ const login = async (req, res) => {
       });
     }
 
-    // Create JWT token
+    // Create JWT token - include user id and role so auth middleware can identify the user
     const token = jwt.sign(
-      {  email: user.email },
+      { id: user._id, role },
       myScrete,
       { expiresIn: '1d' }
     );
@@ -309,25 +309,41 @@ const login = async (req, res) => {
 
 const getUserInfo = async (req, res) => {
   try {
-    const { role, userId } = req; 
+    // Prefer lookup by userId and role provided by the token. If those are missing (older tokens)
+    // fall back to looking up by email (if present on token).
+    const { role, userId, email } = req;
 
-    let user;
-    switch(role) {
-      case 'seller':
-        user = await sellerModel.findById(userId).select('-password');
-        break;
-      case 'rider':
-        user = await riderModel.findById(userId).select('-password');
-        break;
-      default: // buyer
-        user = await userModel.findById(userId).select('-password');
+    let user = null;
+
+    if (userId) {
+      switch (role) {
+        case 'seller':
+          user = await sellerModel.findById(userId).select('-password');
+          break;
+        case 'rider':
+          user = await riderModel.findById(userId).select('-password');
+          break;
+        default:
+          user = await userModel.findById(userId).select('-password');
+      }
+    }
+
+    // If we didn't find a user by id, try to resolve by email (backwards compatibility)
+    if (!user && email) {
+      // Try buyer first, then seller, then rider (similar to login logic)
+      user = await userModel.findOne({ email }).select('-password');
+      if (!user) {
+        user = await sellerModel.findOne({ email }).select('-password');
+        if (user) req.role = 'seller';
+      }
+      if (!user) {
+        user = await riderModel.findOne({ email }).select('-password');
+        if (user) req.role = 'rider';
+      }
     }
 
     if (!user) {
-      return res.status(404).json({
-        success: false,
-        message: "User not found"
-      });
+      return res.status(404).json({ success: false, message: 'User not found' });
     }
 
     res.status(200).json({
