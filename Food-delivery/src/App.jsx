@@ -21,14 +21,14 @@ import NotFound from "./component/NotFoundPage/NotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./component/Form/ProtectedRoute";
-import FigmaKonvaEditor from "./Pages/FigmaKonva";
+
 
 function App() {
   return (
     <>
       <div>
         <Routes>
-          <Route path="/" element={<FigmaKonvaEditor />} />
+          <Route path="/" element={<Home />} />
           <Route path="/landingPage" element={<HomeTwo />} />
           <Route path="/login" element={<Login />} />
           <Route
