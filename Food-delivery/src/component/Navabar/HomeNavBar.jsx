@@ -66,8 +66,8 @@ const HomeNavBar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t-2 p-4 space-y-4">
-            <span className="block">Home</span>
-            <span className="block">Restaurant</span>
+             <span className="block"><Link to= '/'>Home</Link></span>
+              <span className="block"><Link to='/landingPage'>Restaurant</Link></span>
             <div className="flex items-center space-x-2">
               <input
                 type="search"
