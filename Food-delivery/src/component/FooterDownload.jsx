@@ -3,7 +3,7 @@ import appStore from '../assets/images/App store.png'
 import playStore from '../assets/images/Play store.png'
 import chat from '../assets/images/chat.png'
 import whatsapp from '../assets/images/whatsapp.png'
-import instagram from '../assets/images/instagram.png'
+import instagram from '../assets/images/Instagram.png'
 import facebook from '../assets/images/facebook.png'
 import twitter from '../assets/images/facebook.png'
 const FooterDownload = () => {
