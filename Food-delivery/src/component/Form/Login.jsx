@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../Botton";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { toast } from "react-toastify";

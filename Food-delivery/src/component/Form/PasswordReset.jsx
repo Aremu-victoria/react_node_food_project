@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Botton'
 import lock from  '../../assets/images/lock.png'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 const PasswordReset = () => {
   return (
     <>

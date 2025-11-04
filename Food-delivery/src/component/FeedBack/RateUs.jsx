@@ -1,7 +1,7 @@
 import { Rating} from 'flowbite-react'
 import React from 'react'
 import Button from '../Botton'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 const RateUs = () => {
   return (
     <>

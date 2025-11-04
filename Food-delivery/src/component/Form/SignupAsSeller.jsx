@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Botton";
 import { Accordion } from "flowbite-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { toast } from "react-toastify";

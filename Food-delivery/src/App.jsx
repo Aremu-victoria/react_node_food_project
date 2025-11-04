@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import RiderDashboard from "./component/RiderDashboard";
 import RiderDeliveryDash from "./component/RiderDeliveryDash";
 import RiderNotificationPage from "./component/RiderNotificationPage";

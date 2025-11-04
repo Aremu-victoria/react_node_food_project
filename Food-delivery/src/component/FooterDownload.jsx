@@ -1,11 +1,10 @@
 import React from 'react'
-import appStore from '../assets/images/app-store.png'
-import playStore from '../assets/images/play-store.png'
+import appStore from '../assets/images/App store.png'
+import playStore from '../assets/images/Play store.png'
 import chat from '../assets/images/chat.png'
 import whatsapp from '../assets/images/whatsapp.png'
-import instagram from '../assets/images/instagram.png'
+import instagram from '../assets/images/Instagram.png'
 import facebook from '../assets/images/facebook.png'
-import twitter from '../assets/images/twitter.png'
 const FooterDownload = () => {
   return (
     <div className='mt-5'>
@@ -20,7 +19,6 @@ const FooterDownload = () => {
              <p><img src={whatsapp} alt="" /></p>
              <p><img src={instagram} alt="" /></p>
              <p><img src={facebook} alt="" /></p>
-             <p><img src={twitter} alt="" /></p>
         </div>
     </div>
   )

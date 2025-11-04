@@ -5,7 +5,7 @@ import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { IoSearch } from "react-icons/io5";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiMenuFries } from "react-icons/ci";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const HomeNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

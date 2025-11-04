@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Botton'
 import feed from '../../assets/images/feed.png'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 const FeedbackMessage = () => {
   return (
     <>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import image from '../assets/images/navLogo.png'
-import { Outlet } from 'react-router';
+import { Outlet } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -4,7 +4,7 @@ import item7 from "../assets/images/item7.png";
 import brent from "../assets/images/brent.png";
 import alata from "../assets/images/alata.png";
 import aroma from "../assets/images/aroma.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { toast } from "react-toastify";
@@ -29,10 +29,8 @@ const Companies = () => {
 
   return (
     <div>
-      <Link to="/">
-        <a href="" className="text-blue-600 underline p-5">
-          Back to HomePage
-        </a>
+      <Link to="/" className="text-blue-600 underline p-5">
+        Back to HomePage
       </Link>
       <h2 className="text-center text-semibold text-2xl mt-5">
         Order your delicious meals from our best restaurants

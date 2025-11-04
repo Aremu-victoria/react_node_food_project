@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import lock from "../../assets/images/lock.png";
 import Button from "../Botton";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';

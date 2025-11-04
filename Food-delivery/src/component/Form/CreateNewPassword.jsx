@@ -1,6 +1,6 @@
 import Button from "../Botton";
 import lock from "../../assets/images/lock.png";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useState } from "react";
