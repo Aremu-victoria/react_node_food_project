@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    html,body{
+        @apply m-0 p-0 overflow-x-hidden bg-[#ebeefa] placeholder:text-sm
+    }
+}
+.custom-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    display: none; 
+  }
+  
