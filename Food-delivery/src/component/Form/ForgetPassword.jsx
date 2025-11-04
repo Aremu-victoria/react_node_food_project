@@ -17,7 +17,7 @@ const ForgetPassword = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:8080/forgot-password', { email, role });
+      await axios.post('https://react-node-food-project.onrender.com/forgot-password', { email, role });
       toast.success("Password reset link sent to your email");
       navigate("/login");
     } catch (error) {

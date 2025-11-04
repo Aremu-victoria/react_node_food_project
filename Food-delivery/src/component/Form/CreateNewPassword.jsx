@@ -18,7 +18,7 @@ const CreateNewPassword = () => {
   useEffect(() => {
     const verifyToken = async () => {
       try {
-        await axios.post('http://localhost:8080/verify-reset-token', { token });
+        await axios.post('https://react-node-food-project.onrender.com/verify-reset-token', { token });
         setValidToken(true);
       } catch (error) {
         toast.error('Invalid or expired reset token');
@@ -38,7 +38,7 @@ const CreateNewPassword = () => {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:8080/reset-password', { 
+      await axios.post('https://react-node-food-project.onrender.com/reset-password', { 
       token, 
       newPassword, 
       role 

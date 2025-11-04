@@ -15,7 +15,7 @@ const Companies = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:8080/api/user', {
+        const response = await axios.get('https://react-node-food-project.onrender.com/api/user', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUser(response.data.user);

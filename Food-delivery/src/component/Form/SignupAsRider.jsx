@@ -41,7 +41,7 @@ const SignupAsRider = () => {
           position: "top-right",
           autoClose: 3000,
         });
-        await axios.post("http://localhost:8080/signupAsRider", values);
+        await axios.post("https://react-node-food-project.onrender.com/signupAsRider", values);
         toast.update(toastId, {
           render: "Registration successful! Redirecting to login...",
           type: "success",

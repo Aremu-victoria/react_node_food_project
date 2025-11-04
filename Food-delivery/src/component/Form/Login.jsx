@@ -24,7 +24,7 @@ const Login = () => {
     onSubmit: async (values) => {
       try {
         setLoading(true);
-        const response = await axios.post('http://localhost:8080/login', values);
+        const response = await axios.post('https://react-node-food-project.onrender.com/login', values);
         
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('role', response.data.role);

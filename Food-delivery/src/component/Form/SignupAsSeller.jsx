@@ -49,7 +49,7 @@ const SignupAsSeller = () => {
         });
 
         // Make API call
-          await axios.post("http://localhost:8080/signupAsSeller", values);  
+          await axios.post("https://react-node-food-project.onrender.com/signupAsSeller", values);  
           toast.update(toastId, {
           render: "Account created successfully! Redirecting...",
           type: "success",

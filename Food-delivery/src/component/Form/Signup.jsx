@@ -25,7 +25,7 @@ const Signup = () => {
         }
 
         const response = await axios.post(
-          "http://localhost:8080/signup",
+          "https://react-node-food-project.onrender.com/signup",
           values
         );
         toast.success("Signup successful! Redirecting to login...", {
